@@ -1,0 +1,171 @@
+html,
+body {
+	margin: 0px;
+	height: 100%;
+	font-family: 'Rubik Doodle Shadow', system-ui;
+}
+
+:root {
+
+	--primary-color: #edf2fc;
+	--secondary-color: #212121;
+}
+
+#sidebar {
+	grid-area: sidebar;
+	overflow-y: scroll;
+	width: 150px;
+	margin-top: 20px;
+}
+
+#content {
+	grid-area: content;
+	margin-top: 20px;
+	border: 1px solid;
+}
+
+.header {
+	grid-area: header;
+	width: auto;
+	height: 40px;
+}
+
+.dark-theme {
+	--primary-color: #000106;
+	--secondary-color: #a3a0a0;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+.sideBarItem {
+	max-height: 50px;
+	max-width: 50px;
+	padding: 5px;
+}
+
+.sideBarItem img {
+	max-height: 50px;
+	max-Width: 50px;
+}
+
+.colourPalette {
+	grid-area: colourP;
+	display: flex;
+	flex-direction: grid;
+	flex-flow: wrap;
+}
+
+.options {
+	grid-area: options;
+	padding: 15px;
+}
+
+.colourSwatches {
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 70px 230px minmax(500px, 1fr);
+	grid-template-rows: 35px minmax(500px, 1fr) 160px;
+	grid-template-areas:
+		"header header header"
+		"sidebar content content"
+		"colourP colourP options";
+	background-color: #fff;
+	color: var(--secondary-color);
+}
+
+.box {
+	background-color: var(--secondary-color);
+	color: #fff;
+	font-size: 150%;
+
+}
+
+.header {
+	background-color: var(--secondary-color);
+	padding: 8px;
+	height: 100px;
+}
+
+/*self written*/
+.container-one {
+	background-color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+}
+
+.clearButton {
+	border: none;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: rgb(0, 10, 144);
+	color: #fff;
+}
+
+.text-title {
+	font-size: 1.5rem;
+	margin-right: 20px;
+	font-weight: bolder;
+	cursor: pointer;
+}
+
+.text-title:hover {
+	color: rgb(0, 10, 144);
+	cursor: pointer;
+}
+
+.saveButton {
+	margin-left: 10px;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: rgb(0, 10, 144);
+	color: #fff;
+	border: none;
+}
+
+.clearButton:hover {
+	background-color: #27d7ee;
+}
+
+.saveButton:hover {
+	background-color: #27d7ee;
+	;
+}
+
+.container-new {
+	background-color: var(--secondary-color);
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	height: 50px;
+	border-radius: 80px;
+	margin-right: 10px;
+	padding: 10px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+
+#icon {
+	margin-left: 10px;
+	border-radius: 20px;
+	padding: 10px;
+	color: #fff;
+	border: none;
+	width: 30px;
+}
+
+/*ends here */
+
+/* rest of the code was available with the project itself */

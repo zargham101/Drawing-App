@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="lib/p5.min.js"></script>
+  <script src="lib/p5.dom.js"></script>
+
+  <script src="sketch.js"></script>
+
+  <script src="toolbox.js"></script>
+  <script src="colourPalette.js"></script>
+  <script src="helperFunctions.js"></script>
+
+
+  <script src="freehandTool.js"></script>
+  <script src="lineToTool.js"></script>
+  <script src="mirrorDrawTool.js"></script>
+  <script src="shapeTool.js"></script>
+  <script src="wiperTool.js"></script>
+  <script src="elipseTool.js"></script>
+  <script src="select.js"></script>
+  <script src="brush.js"></script>
+  <script src="theme.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Rubik+Doodle+Shadow&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box header" style="height: 40px; display: flex; align-items: center; justify-content: space-between;">
+      <div class="container-one">
+        <img src="assets/paint.jpg" alt="logo" class="logo">
+        <span class="text-title">Canvas</span>
+      </div>
+      <div class="container-new">
+        <button id="clear" class="clearButton">Clear</button>
+        <button id="saveImageButton" class="saveButton">Save Image</button>
+        <img src="assets/night-mode.png" id="icon">
+      </div>
+    </div>
+
+    <div class="box" id="sidebar"></div>
+    <div id="content"></div>
+    <div class="box colourPalette"></div>
+    <div class="box options"></div>
+  </div>
+  <!-- 
+  Open AI Code -->
+
+  <script>
+
+    var icon = document.getElementById("icon");
+
+
+    icon.onclick = toggleTheme;
+
+
+    toggleTheme();
+
+    function toggleTheme() {
+
+      document.body.classList.toggle("dark-theme");
+
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "assets/day-mode.png";
+      } else {
+        icon.src = "assets/night-mode.png";
+      }
+    }
+  </script>
+  <!-- ends here -->
+
+</body>
+
+</html>
